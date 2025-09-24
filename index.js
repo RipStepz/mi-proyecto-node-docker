@@ -3,6 +3,8 @@ const pool = require('./db'); // Importar la conexión
 const app = express();
 const port = 3000;
 
+app.disable('x-powered-by');
+
 // Ruta de prueba que guarda un mensaje en la base de datos
 app.get('/save', async (req, res) => {
   try {
@@ -28,6 +30,10 @@ app.get('/messages', async (req, res) => {
 
 app.get('/', (req, res) => {
   res.send('¡Bienvenido! Usa /save para guardar un mensaje y /messages para verlos.');
+});
+
+app.use((req, res) => {
+  res.status(404).send('404 Not Found');
 });
 
 app.listen(port, () => {
