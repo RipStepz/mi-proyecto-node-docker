@@ -4,7 +4,9 @@ CREATE TABLE clientes (
 	correo VARCHAR(200) NOT NULL,
 	direccion VARCHAR(400) NOT NULL,
 	telefono VARCHAR(200) NOT NULL,
-	numero_cuenta INT NOT NULL
+	numero_cuenta INT NOT NULL,
+	saldo_cuenta REAL DEFAULT 0,
+	contrasena VARCHAR(200) NOT NULL
 
 );
 
