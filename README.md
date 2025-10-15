@@ -49,5 +49,7 @@ Para reiniciar un servicio específico:
 Para detener todos los contenedores sin eliminar volúmenes:
   - docker compose down
 
+usa para instalar el exprees-session
+docker compose exec app sh -lc "npm install --save express-session && npm ls express-session"
 
 
